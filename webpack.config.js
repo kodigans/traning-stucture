@@ -17,6 +17,17 @@ module.exports = {
           use: ['css-loader', 'less-loader'],
         }),
       },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[folder]/[name].[ext]',
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [new ExtractTextPlugin('style/main.css')],
