@@ -1,0 +1,9 @@
+@pathToSvg : "../img/sprite.svg";
+
+.addSvg(@shiftDown; @width; @height: @width) {
+  height: @height;
+  width: @width;
+  background: url("@{pathToSvg}") no-repeat ;
+  background-size: 100%;
+  background-position: 0  @shiftDown;
+}
