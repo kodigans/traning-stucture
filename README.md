@@ -11,7 +11,7 @@ $ npm install
 
 #### 2. Build application:
 ```sh
-$ npm run start
+$ npm run dev
 ```
 
 # Available scripts and their application:
