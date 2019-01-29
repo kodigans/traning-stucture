@@ -4,9 +4,13 @@ const build = require('./webpack-config/webpack.development');
 const prod = require('./webpack-config/webpack.production');
 
 module.exports = env => {
-    if (env.production) {
-        return merge(common, build);
-    } else {
-        return merge(common, prod)
-    }
+
+  console.log(env.production);
+  if (env.production) {
+      console.log(true);
+      return merge(common, build);
+  } else {
+      console.log(false);
+    return merge(common, prod);
+  }
 };
