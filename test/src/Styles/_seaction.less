@@ -1,0 +1,79 @@
+@import (less) "fonts.less";
+@import (less) "mixin.less";
+
+main {
+  display: flex;
+  flex-direction: row;
+  height: 68%;
+  width: 100%-23%-21%;
+  padding-left: 23%;
+  padding-right: 21%;
+}
+
+section {
+  margin-right: 2.5%;  
+  width: 69%;
+}
+
+article {
+  height: auto;
+  width: 735px;
+  margin-bottom: 5%;
+}
+
+aside {
+  width:  27%;
+  height: 100%;
+}
+
+h2 {
+  .propertyForText(#6a757e; @base-font; 25px; 700; 0.015em);
+  margin-bottom: 0.7%;
+  margin-top: 0.45%;
+}
+
+time {
+  width: 17%;  
+  margin: 15px 0;  
+}
+
+address {
+  width: 45%;
+  margin: 15px 5px;
+  .propertyForText(#657179; @base-font; 15px; 600; 0.05em);  
+  font-style: normal;
+}
+
+.test {
+  .propertyForText(#657179; @base-font; 15px; 600);
+  @leftMargin: 5px;
+  @borderColor: #d4dce3;    
+  @height: 45px;    
+  display: flex;
+  flex-direction: row;
+  width: 100%;  
+  height: @height;
+  border-top: solid 1px @borderColor;
+  border-bottom: solid 2px @borderColor;
+
+  .clock {
+    .addSvg(-197px; 14px);
+    margin: 15px 10px;
+  }
+
+  .foot {    
+    .addSvg(-275px; 16px; 20px);
+    margin: 15px 10px;
+  }
+}
+
+article p {
+  color: #6a757e;
+}
+
+.social-likes {
+  display: flex;
+  flex-direction: row;
+}
+
+//d4dce3 - bg социалок

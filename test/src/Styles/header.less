@@ -1,0 +1,24 @@
+@bgHeaderColor: white;
+
+.header {
+    display: flex;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: @bgHeaderColor;
+
+    &__span {
+      .propertyForText(#6795b9; @header-font; 42px; bold; 0.1em);
+    }
+    
+    &__logo {
+      .addSvg( -200px; 64px;);
+
+      &_active:hover {
+        .addSvg( -300px; 64px;);
+      }
+    }   
+}

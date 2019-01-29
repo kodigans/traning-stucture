@@ -1,0 +1,50 @@
+.post {
+  h2 {
+    .propertyForText(#6a757e; @base-font; 25px; 700; 0.015em);
+    margin-bottom: 0.9%;
+    margin-top: 0.45%;
+  }
+    
+  &__publication-data {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+    padding-top: 1.9%;
+    padding-bottom: 1.8%;    
+  }
+
+  &__clock-icon {
+    .addSvg(-198px; 14px);
+  }
+
+  &__foot-icon {
+    .addSvg(-241px; 14px);    
+  }
+
+  &__date-of-posting {
+
+  } 
+
+  &__author {
+
+  }
+
+  &__social-likes {      
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: stretch;
+       
+      p {
+        margin: 0;
+        padding: 0;
+      }
+  }
+}
