@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development && node ./helpers/main.js",
-    "server": "webpack-dev-server --mode development",
+    "server": "webpack-dev-server --mode development --env.NODE_ENV=local --env.production --progress",
     "devs": "webpack --mode development"
   },
   "repository": {
@@ -30,6 +30,7 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
   }
 }
