@@ -1,3 +1,3 @@
 import './Styles/main.less';
-import './img/landishi.png';
-import './img/politra.png';
+import './blocks/main/post/landishi.png';
+import './blocks/main/post/politra.png';
