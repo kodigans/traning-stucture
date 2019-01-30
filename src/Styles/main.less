@@ -9,7 +9,24 @@
 body {
   display: flex;
   flex-direction: column;
-  background-color: white;  
+  background-color: white;
   height: auto;
   margin: 0;
 }
+
+@media only screen and (min-width : 481px) and (max-width : 780px) {
+  @import (less) "../blocks/blocks.tablet/tablet-main.less";
+  @import (less) "../blocks/blocks.tablet/navigation/navigation.less";
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  @import (less) "../blocks/blocks.mobile/header/header.less";
+  @import (less) "../blocks/blocks.mobile/navigation/navigation.less";
+}
+
+//при смене разрешения
+//*.{
+//  transition: all .4s;
+//}
+
+
