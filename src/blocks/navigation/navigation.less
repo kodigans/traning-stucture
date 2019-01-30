@@ -1,0 +1,42 @@
+@bgNavigationColor: #6b9bd1;
+@borderNavigationColor: #c7dffa;
+@navigationTextColor: white;
+
+.navigation {
+  display: flex;  
+  flex-direction: row;  
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  background-color: @bgNavigationColor;
+  border-top: solid 1px @borderNavigationColor;
+  border-bottom: solid 5px @borderNavigationColor;
+  padding-top: 22px;
+  padding-bottom: 15px;
+  margin-bottom: 2.5%;
+
+  &__item {
+    text-decoration: none;     
+    .propertyForText(@navigationTextColor; @header-font; 20px; 100; -0.1em);
+    margin-right: 3.2%;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      .defaultTriangleProperties();
+      .triangleBorder(#6b9bd1; 10px);
+    }
+    
+    &:before {
+      position: absolute;
+      .defaultTriangleProperties();        
+      .triangleBorder(#c2e1f5; 16px);
+    }
+
+    &_active:hover::after, &_active:hover::before {
+      display: block;
+    }
+  }
+}
+

@@ -1,0 +1,128 @@
+.post {
+  margin-bottom: 7%;
+  
+  
+  &__picture {
+    width: 100%;
+  }
+
+  &__title {
+    .propertyForText(#6a757e; @base-font; 25px; 700; 0.015em);
+    margin-bottom: 0.9%;
+    margin-top: 0.45%;
+  }
+
+  &__publication-data {
+    @borderColor: #d4dce3;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    border-top: 1px solid @borderColor;
+    border-bottom: 2px solid @borderColor;
+  }
+
+  &__clock-icon {
+    .addSvg(-225px; 16px);
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  &__foot-icon {
+    .addSvg(-239px; 14px);
+    margin-left: 2%;
+    margin-right: 0.5%;
+  }
+
+  &__date-of-posting, &__author {
+    .propertyForText(#657179; @base-font; 15px; 600);
+  }
+
+  &__social-likes {
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-grow: 1;
+
+    button {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: #d4dce3;
+
+      border-radius: 4px;
+      border: 0;
+
+      margin-top: 2%;
+      margin-bottom: 2%;
+      margin-left: 1%;
+
+      padding: 0;
+      padding-right: 1.5%;
+
+      .propertyForText(white; @base-font; 15px; 600);
+    }
+
+    .post__yandex-api {
+      .addSvg(-285px; 26px);
+      margin-right: 5px;
+    }
+
+    .vk-api__image-vk {
+      .addSvg(-188px; 20px);
+      margin-right: 10px;
+      margin-top: 3px;
+      margin-bottom: 3px;
+    }
+
+    .twitter-api__image-twitter {
+      .addSvg(-204px; 26px);
+      margin-right: 10px;
+    }
+
+    .facebook-api__image-facebook {
+      .addSvg(-405px; 26px);
+      margin-right: 10px;
+    }
+
+    .google-api__image-google {
+      .addSvg(-40px; 26px);
+      margin-right: 10px;
+    }
+  }
+
+  &__loader { 
+    margin-left: auto;
+    margin-right: auto;
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid #3498db;
+    border-bottom: 6px solid #3498db;
+    width: 40px;
+    height: 40px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  p {
+    color: #6a757e;
+    word-break:break-all;
+  }
+}

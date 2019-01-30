@@ -1,0 +1,39 @@
+@pathToSvg : "../img/sprite.svg";
+
+.addSvg(@shiftDown; @width; @height: @width) {
+  height: @height;
+  width: @width;
+  background: url("@{pathToSvg}") no-repeat ;
+  background-size: 100%;
+  background-position: 0  @shiftDown;
+}
+
+.propertyForText(@color: black; @currentFont; @size; @weight: normal; @indent: normal) {
+  color: @color;
+  font-family: @currentFont;
+  font-size: @size;
+  font-weight: @weight;
+  letter-spacing: @indent;
+  word-wrap: break-word;
+}
+
+.defaultTriangleProperties {
+  top: 39px;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  position: absolute;
+  display: none;  
+}
+
+.triangleBorder(@borderColor; @borderWith) {
+  border-top-color: @borderColor;
+  border-width: @borderWith;
+  margin-left: -@borderWith;
+}  
+
+.flexProperty(@flexDirection: row; @justifyContent: center; @alignItems: center; @alignContent: center;) {  
+  display: flex; 
+  flex-direction: @flexDirection;  
+  //justify-content: ;
+}
