@@ -8,6 +8,7 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: ['css-loader', 'less-loader'],
+                    publicPath: '../'
                 }),
             },
             {
@@ -16,15 +17,15 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[folder]/[name].[ext]',
+                            name: '[path][name].[ext]',                                                           
                         },
                     },
                 ],
             },
         ],
-    },
+    },  
 
     plugins: [
-        new ExtractTextPlugin('style/main.css'),
+        new ExtractTextPlugin('./style/main.css'),
     ]
 };

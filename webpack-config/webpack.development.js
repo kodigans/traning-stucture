@@ -13,6 +13,7 @@ module.exports = {
             use: ExtractTextPlugin.extract({
               fallback: 'style-loader',
               use: ['css-loader', 'less-loader'],
+              publicPath: '../'
             }),
           },
           {
@@ -21,7 +22,7 @@ module.exports = {
               {
                 loader: 'file-loader',
                 options: {
-                  name: '[folder]/[name].[ext]',
+                  name: '[folder]/[name].[ext]',                  
                 },
               },
             ],
