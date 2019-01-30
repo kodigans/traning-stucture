@@ -1,57 +1,75 @@
-@bgNavigationColor: #6b9bd1;
+@bgNavigationColor: #6b9ad0;
 @borderNavigationColor: #c7dffa;
 @navigationTextColor: white;
 
 .navigation {
   display: flex;
   flex-direction: row;  
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
+  height: 60px;
 
   background-color: @bgNavigationColor;
   border-top: solid 1px @borderNavigationColor;
   border-bottom: solid 5px @borderNavigationColor;
-  padding-top: 22px;
-  padding-bottom: 15px;
+  
   margin-bottom: 2.5%;
+}
 
-  &__item {
-    text-decoration: none;     
-    .propertyForText(@navigationTextColor; @header-font; 20px; 100; -0.1em);
-    margin-right: 3.2%;
-    position: relative;
-
-    &:after {
-      position: absolute;
-      .defaultTriangleProperties();
-      .triangleBorder(#6b9bd1; 10px);
-    }
     
-    &:before {
-      position: absolute;
-      .defaultTriangleProperties();        
-      .triangleBorder(#c2e1f5; 16px);
-    }
+.navigation__menu {
+  display: flex;
+  flex-direction: row;  
+  justify-content: center;//space-between;
+  align-items: center;
+  align-content: center;  
+}
 
-    &_active:hover::after, &_active:hover::before {
-      display: block;
-    }
-    &__helps {
+.menu__item {
+  margin-right: 25%;
+  text-decoration: none;     
+  .propertyForText(@navigationTextColor; @header-font; 20px; 100; -0.1em);  
+  position: relative;
 
-    }
+  &:after {
+    position: absolute;
+    .defaultTriangleProperties();
+    .triangleBorder(#6b9ad0; 10px);
   }
+    
+  &:before {
+    position: absolute;
+    .defaultTriangleProperties();        
+    .triangleBorder(#c2e1f5; 16px);
+  }
+
+  &_active:hover::after, &_active:hover::before {
+    display: block;
+  }     
 }
 
-
-.navigation__help {
-  display: none;
+.navigator__news-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
-.qwes {
-  display: none;
+.navigator__main-mobile-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
-.navigation__navigation {
-  flex-wrap: nowrap;
+.navigation__nav-block {
+  display: none;  
+  justify-content: center;
+  align-items: center;
+  background-color: #7ca7d9;
+  height: 100%; 
+  width: 50px;
+  margin: 2px;  
+  .propertyForText(#6b9ad0; @header-font; 20px; 900; -0.1em);  
 }

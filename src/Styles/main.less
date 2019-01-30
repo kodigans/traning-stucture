@@ -16,17 +16,12 @@ body {
 
 
 @media screen and (min-width: 481px) and (max-width:780px) {
-  //@media (less) "../blocks/blocks.mobile/header/header.less";
-  body {
-    background-color: red;
-  }
+  @import (less) "../blocks/blocks.tablet/navigation/navigation.less";
+  
 }
 
 @media screen and (min-width: 320px) and (max-width:480px) {
   @import (less) "../blocks/blocks.mobile/header/header.less";
-  //@import (less) "../blocks/main/post/post.less";
-  //@media (less) "../blocks/"
-  body {
-    background-color: violet;
-  }
+  @import (less) "../blocks/blocks.mobile/navigation/navigation.less";
+  
 }
