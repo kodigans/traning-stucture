@@ -21,3 +21,45 @@
 .navigator__main-mobile-menu > div:not(:first-child) {
     display: none
 }
+
+//below trash
+
+.test {
+    display: none;
+}
+
+//.navigation__nav-block:hover {
+.test {
+    position: absolute; 
+    top: 120px;
+    display: block;
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent; 
+    border-right: 20px solid transparent; 
+    border-top: 20px solid red; 
+  }
+  
+  .test:before {      
+   border: solid transparent;   
+   content: " ";      
+   border-top-color: green ;
+   border-width: 12px;   
+ }
+ 
+ .test:after {        
+   border: solid transparent;      
+   content: " ";      
+   border-top-color: blue;
+   border-width: 12px;   
+ }
+//}
+
+.test1::after {
+    position: absolute;
+    top: 20%;
+    border: solid transparent;   
+   content: " ";      
+   border-top-color: green ;
+   border-width: 12px;   
+}
