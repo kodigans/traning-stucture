@@ -63,11 +63,11 @@
     </defs>
 
     <g>
-        <use  fill="#222222" xlink:href="#icon-menu" transform="translate(0 0)"></use>
+        <use  fill="#9cbce1" xlink:href="#icon-menu" transform="translate(0 0)"></use>
         <use  fill="#ffffff" xlink:href="#icon-gplus" transform="translate(0 50)"></use>
         <use  fill="#6795b9" xlink:href="#icon-racoon-negative" transform="translate(0 100)"></use>
         <use  fill="#6795b9" xlink:href="#icon-racoon-positive" transform="translate(0 150)"></use>
-        <use  fill="#222222" xlink:href="#icon-tag" transform="translate(0 200)"></use>
+        <use  fill="#6b9ad0" xlink:href="#icon-tag" transform="translate(0 200)"></use>
         <use  fill="#ffffff" xlink:href="#icon-twitter" transform="translate(0 250)"></use>
         <use  fill="#ffffff" xlink:href="#icon-vk" transform="translate(0 300)"></use>
         <use  fill="#ffffff" xlink:href="#icon-yaru" transform="translate(0 350)"></use>
