@@ -1,12 +1,46 @@
-.navigation {
-    align-items: stretch;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    height: 60px - 4px;
+.menu__item {
+  margin-right: 25%;
+  text-decoration: none;
+  .propertyForText(@navigationTextColor; @header-font; 20px; 100; -0.1em);
+  position: relative;
+
+  &:after {
+    position: absolute;
+    .defaultTriangleProperties(40px; 50%);
+    .triangleBorder(#6b9ad0; 10px);
+  }
+
+  &:before {
+    position: absolute;
+    .defaultTriangleProperties(42px; 50%);
+    .triangleBorder(#c2e1f5; 16px);
+  }
+
+  &_active:hover::after, &_active:hover::before {
+    display: block;
+  }
 }
 
+.navigation {
+    align-items: stretch;
+    padding: 0;
+    justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navigation__nav-block {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.navigation__menu {
+  justify-content: space-between;
+  width: 70%;
+}
+
+
 .menu__item {
-    margin-right: 5%;
+    margin: 0;
     justify-content: space-between;
 }
 
@@ -22,44 +56,34 @@
     display: none
 }
 
-//below trash
-
-.test {
-    display: none;
-}
-
-//.navigation__nav-block:hover {
-.test {
-    position: absolute; 
-    top: 120px;
-    display: block;
-    width: 0; 
-    height: 0; 
-    border-left: 20px solid transparent; 
-    border-right: 20px solid transparent; 
-    border-top: 20px solid red; 
+.navigator__news-menu {
+  &:hover {
+    &~ .test {
+      display: block;
+      height: 40px;
+      border-top: solid 5px @borderNavigationColor;
+      background-color: #ffffff;
+      width: 100%;
+    }
   }
-  
-  .test:before {      
-   border: solid transparent;   
-   content: " ";      
-   border-top-color: green ;
-   border-width: 12px;   
- }
- 
- .test:after {        
-   border: solid transparent;      
-   content: " ";      
-   border-top-color: blue;
-   border-width: 12px;   
- }
-//}
-
-.test1::after {
-    position: absolute;
-    top: 20%;
-    border: solid transparent;   
-   content: " ";      
-   border-top-color: green ;
-   border-width: 12px;   
 }
+
+.navigator__news-menu {
+  &:hover {
+    &~ .test {
+      position: absolute;
+      top: 30px;
+      display: block;
+      height: 40px;
+      border-top: solid 5px @borderNavigationColor;
+      background-color: #ffffff;
+      width: 100%;
+      z-index: 2;
+    }
+  }
+}
+
+button {
+  border: none;
+}
+

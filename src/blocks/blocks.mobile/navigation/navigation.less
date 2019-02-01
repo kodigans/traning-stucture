@@ -1,8 +1,7 @@
 .navigation {
-  height: 34px;
-  padding-top: 2px;
-  padding-bottom: 2px;
   align-items: stretch;
+  border-bottom: 0px;
+
 }
 
 .navigation__menu {
@@ -32,10 +31,32 @@
 }
 
 .nav-block__icon-tags {
-  .addSvg(-138px; 22px)
+  .addSvg(-139px; 22px)
 } 
 
 
 .navigator__main-mobile-menu > div:first-child {
   display: none
+}
+
+
+.menu__item {
+  &:after {
+    .defaultTriangleProperties(34px; 50%);
+    .triangleBorder(#7ca7d9; 8px);
+  }
+
+  &:before {
+    .defaultTriangleProperties(35px; 50%);
+    .triangleBorder(#6b9ad0; 12px);
+  }
+}
+
+.navigator__main-mobile-menu {
+  .menu__item {
+    &:after {
+      .defaultTriangleProperties(34px; 50%);
+      .triangleBorder(#7ca7d9; 8px);
+    }
+  }
 }

@@ -17,9 +17,9 @@
   word-wrap: break-word;
 }
 
-.defaultTriangleProperties {
-  top: 39px;
-  left: 50%;
+.defaultTriangleProperties(@top; @left) {
+  top: @top;
+  left: @left;
   border: solid transparent;
   content: " ";
   position: absolute;
@@ -34,6 +34,6 @@
 
 .flexProperty(@flexDirection: row; @justifyContent: center; @alignItems: center; @alignContent: center;) {  
   display: flex; 
-  flex-direction: @flexDirection;  
+  flex-direction: @flexDirection;
   //justify-content: ;
 }
