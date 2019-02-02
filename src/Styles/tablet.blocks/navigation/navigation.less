@@ -1,0 +1,111 @@
+.navigation {
+  justify-content: space-between;
+  padding: 0px;
+  flex-wrap: wrap;
+}
+
+.navigation__nav-block {
+  position: relative;
+  display: flex;
+  height: 54px;
+  width: 50px;  
+  margin-top: 3px;
+  margin-bottom: 3px;
+  }
+
+.navigator__news-menu {
+  display: flex;
+  width: auto;
+}
+
+.navigation__menu {
+  width: 50%;  
+}
+
+.menu__item {
+  margin-right: 2%;
+}
+
+.havigation__pop-up-block {  
+  display: none;
+  justify-content: row;  
+  width: 100%;
+  background-color: #fff;      
+  border-top: 5px solid #c6defa;
+  .propertyForText(#657179; @base-font; 15px; 300);
+  &_left{
+
+  }
+  
+}
+
+.pop-up-block__title{  
+  display: flex;
+  background-color: #eef4fa;
+  min-height: 150px;
+  width: 53px;
+  justify-content: center;
+  align-items: center; 
+  z-index: 1;
+  float: left;
+  margin-right: 1rem;    
+  span {
+    transform: rotate(-90deg); //браузеры без префексов
+    .propertyForText(#6290b4; @header-font; 22px; bold; 0.1em);
+  }
+}
+
+.navigation__nav-block:hover {  
+  &::after { 
+  top: 50px;
+  left: 10px;
+    border: solid transparent;
+    content: " ";
+    position: absolute;
+    display: block;  
+    border-top-color: #7ca7d9;
+    border-width: 15px; 
+    z-index: 3; 
+  }
+
+  &::before {
+  top: 57px;
+  left: 10px;
+    border: solid transparent;
+    content: " ";
+    position: absolute;
+    display: block;          
+    border-top-color:#c6defa;
+    border-width: 15px;  
+    z-index: 3; 
+  }
+}
+
+.left:hover {  
+ & ~ .left {
+   display: block;
+  }
+}   
+
+.right:hover {  
+ & ~ .right {
+   display: block;
+  }
+}   
+
+
+// отключение левых и правых блоков
+.navigator__news-menu > div:not(:first-child) {
+    display: none;
+}
+
+.navigator__main-mobile-menu > div:not(:first-child) {
+    display: none
+}
+
+//поставка фонового изображениния на фон ..
+  // background:  url('L:\Inner\traning-stucture\src\img\sprite.svg') no-repeat;
+  // background-size: 30px;
+  // background-position: 0px -60px;
+
+

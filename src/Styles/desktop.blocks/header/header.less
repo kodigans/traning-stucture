@@ -1,18 +1,21 @@
 @bgHeaderColor: white;
 
 .header {
+  padding: 0;
+  margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     align-content: center;
+    
 
-    padding-top: 1%;
-    padding-bottom: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     background-color: @bgHeaderColor;
 
     &__title {
-      .propertyForText(#6795b9; @header-font; 39px; bold; 0.1em);
+      .propertyForText(#6795b9; @header-font; 2em; bold; 0.1em);
     }
 
     &__logo {

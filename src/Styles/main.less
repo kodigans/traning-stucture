@@ -1,10 +1,12 @@
+
+  @import (less) "./desktop.blocks/main/aside/aside.less";
+  @import (less) "./desktop.blocks/header/header.less";
+  @import (less) "./desktop.blocks/main/seaction/seaction.less";
+  @import (less) "./desktop.blocks/navigation/navigation.less";
+  @import (less) "./desktop.blocks/main/post/post.less"; 
+
 @import (less) "mixin.less";
 @import (less) "fonts.less";
-@import (less) "../blocks/main/aside/aside.less";
-@import (less) "../blocks/header/header.less";
-@import (less) "../blocks/main/seaction/seaction.less";
-@import (less) "../blocks/navigation/navigation.less";
-@import (less) "../blocks/main/post/post.less";
 
 body {
   display: flex;
@@ -12,19 +14,23 @@ body {
   background-color: white;
   height: auto;
   margin: 0;
+  padding: 0;
 }
 
 
 @media screen and (min-width: 481px) and (max-width:780px) {
-  @import (less) "../blocks/blocks.tablet/navigation/navigation.less";
+  @import (less) "./tablet.blocks/navigation/navigation.less";
   
 }
 
 @media  screen and (min-width: 320px) and (max-width:480px) {
-  @import (less) "../blocks/blocks.mobile/header/header.less";
-  @import (less) "../blocks/blocks.mobile/navigation/navigation.less";  
+  @import (less) "./mobile.blocks/header/header.less";
+  @import (less) "./mobile.blocks/navigation/navigation.less";  
 }
 
+
+@media screen and (min-width: 781px) {
+}
 
 * {
   transition: all .2s

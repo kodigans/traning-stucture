@@ -5,7 +5,7 @@
 .navigation {
   display: flex;
   flex-direction: row;  
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   align-content: center;
   padding-top: 20px;
@@ -19,7 +19,7 @@
 .navigation__menu {
   display: flex;
   flex-direction: row;  
-  justify-content: center;//space-between;
+  justify-content: center;
   align-items: center;
   align-content: center;  
 }
@@ -27,7 +27,8 @@
 .menu__item {
   margin-right: 25%;
   text-decoration: none;     
-  .propertyForText(@navigationTextColor; @header-font; 20px; 100; -0.1em);  
+  .propertyForText(@navigationTextColor; @header-font; 20px; 100; -0.1em);    
+  line-height: 20px;
   position: relative;
 
   &:after {
@@ -76,9 +77,6 @@
   background-color: @bgNavigationColor;
 }
 
-
-.test {
+.havigation__pop-up-block {
   display: none;
-  height: 20px;
-  width: 100%;
 }
