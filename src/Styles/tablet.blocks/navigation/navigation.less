@@ -26,17 +26,17 @@
   margin-right: 2%;
 }
 
-.havigation__pop-up-block {  
+.navigation__pop-up-block {  
   display: none;
   justify-content: row;  
   width: 100%;
   background-color: #fff;      
   border-top: 5px solid #c6defa;
   .propertyForText(#657179; @base-font; 15px; 300);
-  &_left{
-
+    p {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  
 }
 
 .pop-up-block__title{  
@@ -47,11 +47,18 @@
   justify-content: center;
   align-items: center; 
   z-index: 1;
-  float: left;
-  margin-right: 1rem;    
-  span {
-    transform: rotate(-90deg); //браузеры без префексов
+  &_left {    
+    float: left;
+    margin-right: 1rem;      
     .propertyForText(#6290b4; @header-font; 22px; bold; 0.1em);
+  }
+  &_right {    
+    float: right;
+    margin-left: 1rem;   
+    .propertyForText(#6290b4; @header-font; 12px; bold; 0.1em);   
+  }
+  span {
+    transform: rotate(-90deg); //браузеры без префексов    
   }
 }
 
