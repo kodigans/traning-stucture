@@ -11,6 +11,13 @@
   width: 50px;  
   margin-top: 3px;
   margin-bottom: 3px;
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+    width: 50px;
+  }  
   }
 
 .navigator__news-menu {
@@ -88,17 +95,27 @@
   }
 }
 
-.left:hover {  
- & ~ .left {
-   display: block;
-  }
-}   
+// .left:hover {  
+//  & ~ .left {
+//    display: block;
+//   }
+// }   
 
-.right:hover {  
- & ~ .right {
-   display: block;
-  }
-}   
+// .right:hover {  
+//  & ~ .right {
+//    display: block;
+//   }
+// }   
+
+#show-about-block:checked ~ .left {
+  display: block;
+}
+
+#show-some-block:checked ~ .right {
+  display: block;
+}
+
+
 
 
 // отключение левых и правых блоков
@@ -114,5 +131,6 @@
   // background:  url('L:\Inner\traning-stucture\src\img\sprite.svg') no-repeat;
   // background-size: 30px;
   // background-position: 0px -60px;
+
 
 
