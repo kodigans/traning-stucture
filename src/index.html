@@ -17,8 +17,8 @@
     <div class='navigator__news-menu left'>
         <div class="navigation__nav-block"> <span> &#x3f </span> </div>
         <div class="navigation__nav-block"> <span> &#x21 </span> </div>
-        <div class="navigation__nav-block nav-block__icon-tags"> 
-            <!-- <svg class='nav-block__icon-tags'> </svg> -->
+        <div class="navigation__nav-block "> 
+            <svg class='nav-block__icon-tags'> </svg>
         </div>
 <!--         <button class="navigation__nav-block">
             <span> &#x3f </span>
@@ -48,7 +48,10 @@
             </div>
         </div> -->
         <div class="navigation__nav-block"> &#x21 </div>
-        <div class="navigation__nav-block"></div>
+        <div class="navigation__nav-block">
+            <input type="checkbox" class='navigation__popup-checkbox' id='show-main-mobile-menu'>
+            <label for='show-main-mobile-menu'><svg class='nav-block__icon-menu' > </svg> </label>
+        </div>
     </div>
     <div class="navigation__pop-up-block left">        
          <div class="pop-up-block__title  pop-up-block__title_left">
@@ -68,6 +71,44 @@
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
                 aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                 occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        </div>
+        <div class="navigation__pop-up-block navigation__pop-up-block_mobile"> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            <span class='pop-up-block__mobile-title'> SOME INFORMATION  &#x21d1</span>
+        </div>
+        <div class="navigation__pop-up-block navigation__pop-up-block_mobile"> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            <span class='pop-up-block__mobile-title'> ABOUT  &#x21d1</span>
+        </div>
+        <div class="navigation__pop-up-block navigation__pop-up-block_mobile"> 
+                <article class='side-bar__tags-block'>
+                        <div class='side-bar__tag'>  Raccon </div>
+                        <div class='side-bar__tag'>  Raccon</div>
+                        <div class='side-bar__tag'>  Coon</div>
+                        <div class='side-bar__tag'> Dog </div>
+                        <div class='side-bar__tag'> Cat </div>
+                        <div class='side-bar__tag'> Developer </div>
+                        <div class='side-bar__tag'>  Raccon </div>
+                        <div class='side-bar__tag'>  Raccon</div>
+                        <div class='side-bar__tag'>  Coon</div>
+                        <div class='side-bar__tag'> Dog </div>
+                        <div class='side-bar__tag'> Cat </div>
+                        <div class='side-bar__tag'> Developer </div>
+                </article>
+                <span class='pop-up-block__mobile-title'>   &#x21d1</span>
+        </div>
+        <div class="navigation__pop-up-block navigation__pop-up-block_mobile pop-up-block_main-mobile-menu">
+                <div class="navigation__menu">
+                        <a class='' href='#'>  JAVASCRIPT  </a>
+                        <hr>
+                        <a class='' href='#'>  CSS  </a>
+                        <hr>
+                        <a class='' href='#'>  LATEST </a>
+                        <hr>
+                        <a class='' href='#'>  HTML </a>
+                        <hr>
+                        <a class='' href='#'>  DESIGN </a>                        
+                </div>  
         </div>
 </nav>
  <!--<main class='main'>
@@ -167,21 +208,22 @@
             <!--</header>-->
             <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
         <!--</article>-->
-        <!--<article class='side-bar__tags-block'>-->
-            <!--<div class='side-bar__tag'>  Raccon </div>-->
-            <!--<div class='side-bar__tag'>  Raccon</div>-->
-            <!--<div class='side-bar__tag'>  Coon</div>-->
-            <!--<div class='side-bar__tag'> Dog </div>-->
-            <!--<div class='side-bar__tag'> Cat </div>-->
-            <!--<div class='side-bar__tag'> Developer </div>-->
-            <!--<div class='side-bar__tag'>  Raccon </div>-->
-            <!--<div class='side-bar__tag'>  Raccon</div>-->
-            <!--<div class='side-bar__tag'>  Coon</div>-->
-            <!--<div class='side-bar__tag'> Dog </div>-->
-            <!--<div class='side-bar__tag'> Cat </div>-->
-            <!--<div class='side-bar__tag'> Developer </div>-->
-        <!--</article>-->
-    <!--</aside>-->
-<!--</main>  &ndash;&gt;-->
+
+        <!-- <article class='side-bar__tags-block'>
+            <div class='side-bar__tag'>  Raccon </div>
+            <div class='side-bar__tag'>  Raccon</div>
+            <div class='side-bar__tag'>  Coon</div>
+            <div class='side-bar__tag'> Dog </div>
+            <div class='side-bar__tag'> Cat </div>
+            <div class='side-bar__tag'> Developer </div>-
+            <div class='side-bar__tag'>  Raccon </div>
+            <div class='side-bar__tag'>  Raccon</div>
+            <div class='side-bar__tag'>  Coon</div>
+            <div class='side-bar__tag'> Dog </div>
+            <div class='side-bar__tag'> Cat </div>
+            <div class='side-bar__tag'> Developer </div>
+        </article> -->
+    </aside>
+</main>
 </body>
 </html>
