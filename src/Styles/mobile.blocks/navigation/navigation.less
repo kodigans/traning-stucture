@@ -17,6 +17,13 @@
   margin: 2px;
   width: 35px;
   height: 35px;
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+  }
 }
 
 .nav-block__icon-menu{
@@ -120,26 +127,24 @@ hr {
   color: #fff;
 }
 
-//  .pop-up-block_main-mobile-menu {
-//    display: block;
-//  }
-
 .navigation__popup-checkbox{
- //display: none;  
+  display: none;  
 }
 
-.right:hover ~ .pop-up-block_main-mobile-menu{
+
+#show-main-mobile-menu:checked  ~ .pop-up-block_main-mobile-menu{
+    display: block;
+}
+
+#show-tags:checked ~.pop-up-block_tags{
+  padding-top: 20px;
   display: block;
 }
 
-// #show-main-mobile-menu:checked {
-//   #test {    
-//     background-color: red;  
-//   }
-  
-// }
+#show-some-block:checked ~ .pop-up-block_some {
+  display: block;
+}
 
-
-// .show-main-mobile-menu:checked ~ .pop-up-block_main-mobile-menu {
-//   display: block;
-// }
+#show-about-block:checked ~ .pop-up-block_about {
+  display: block;
+}
