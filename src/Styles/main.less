@@ -17,15 +17,19 @@ body {
   padding: 0;
 }
 
-
 @media screen and (min-width: 481px) and (max-width:780px) {
   @import (less) "./tablet.blocks/navigation/navigation.less";
-  
+  @import (less) "./tablet.blocks/main/seaction/seaction.less";
+  @import (less) "./tablet.blocks/main/post/post.less";
+  @import (less) "./tablet.blocks/main/aside/aside.less";
 }
 
 @media  screen and (min-width: 320px) and (max-width:480px) {
   @import (less) "./mobile.blocks/header/header.less";
-  @import (less) "./mobile.blocks/navigation/navigation.less";  
+  @import (less) "./mobile.blocks/navigation/navigation.less";
+  @import (less) "./mobile.blocks/main/seaction/seaction.less";
+  @import (less) "./mobile.blocks/main/aside/aside.less";
+  @import (less) "./mobile.blocks/main/post/post.less";
 }
 
 

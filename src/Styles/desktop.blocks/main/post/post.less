@@ -4,6 +4,7 @@
   
   &__picture {
     width: 100%;
+    display: block;
   }
 
   &__title {
@@ -22,8 +23,10 @@
     flex-wrap: wrap;
 
     border-top: 1px solid @borderColor;
-    border-bottom: 2px solid @borderColor;
+    border-bottom: 1px solid @borderColor;
   }
+
+
 
   &__clock-icon {
     .addSvg(-225px; 16px);
@@ -32,13 +35,14 @@
   }
 
   &__foot-icon {
-    .addSvg(-239px; 14px);
+    .addSvg(-241px; 14px);
     margin-left: 2%;
     margin-right: 0.5%;
   }
 
   &__date-of-posting, &__author {
-    .propertyForText(#657179; @base-font; 15px; 600);
+    .propertyForText(#657179; Arial; 13px; 500);
+    font-style: normal;
   }
 
   &__social-likes {
@@ -103,8 +107,8 @@
     margin-right: auto;
     border: 6px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 6px solid #3498db;
-    border-bottom: 6px solid #3498db;
+    border-top: 6px solid #91b1cc;
+    border-bottom: 6px solid #91b1cc;
     width: 40px;
     height: 40px;
     -webkit-animation: spin 2s linear infinite;
@@ -125,4 +129,25 @@
     color: #6a757e;
     word-break:break-all;
   }
+}
+.social-likes_yandex-api:hover {
+  background-color: #d83933;
+}
+
+.social-likes_vk-api:hover {
+  background-color: #48729e;
+}
+
+.social-likes_twitter-api:hover {
+  background-color: #00aced;
+}
+
+
+.social-likes_google-api:hover {
+  background-color: #c25234;
+}
+
+
+.social-likes_facebook-api:hover {
+  background-color: #3c5a98;
 }
