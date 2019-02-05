@@ -1,14 +1,40 @@
 .post__social-likes {
-  display:  none;
+  display:  flex;
+  flex-direction: column;
+  order: -1;
+  width: 40px;
+  min-width: 40px;
+  align-items: flex-end;
+  align-self: start;
 }
-
-.post__publication-data {
-  display: flex;
-  min-height: 36px;
-}
-
 
 
 .main {
-  min-width: 0;
+  min-width: 0px;
+}
+
+.main__main-content {
+ // min-width: 500px;
+}
+
+.post__date-of-posting {
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  margin-right: 20px;
+}
+
+@fixedWidth: 88%;
+
+.post__title {
+  width: @fixedWidth;
+  font-size: 20px;
+}
+
+.post__picture {
+  width: @fixedWidth;
+  order: -1;
+}
+
+.post__text {
+  width: @fixedWidth;
 }
