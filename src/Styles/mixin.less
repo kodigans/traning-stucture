@@ -37,3 +37,15 @@
   flex-direction: @flexDirection;
   //justify-content: ;
 }
+
+.insertSvg(@height; @width; @biasDown) {
+  
+  display: block;
+  content: " ";
+  height: @height;
+  width: @width;
+  position: relative;
+  background: url("@{pathToSvg}") no-repeat;
+  background-position: 0px @biasDown;
+  background-size: cover;
+}
