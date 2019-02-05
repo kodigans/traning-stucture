@@ -13,6 +13,7 @@
   background-color: @bgNavigationColor;
   border-top: solid 1px @borderNavigationColor;
   border-bottom: solid 5px @borderNavigationColor;
+  width: 100%;
   margin-bottom: 2.5%;
   position: sticky;
   top: 0;
@@ -20,15 +21,15 @@
 }
     
 .navigation__menu {
+  width: 640px;
   display: flex;
   flex-direction: row;  
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   align-content: center;  
 }
 
 .menu__item {
-  margin-right: 25%;
   text-decoration: none;     
   .propertyForText(@navigationTextColor; @header-font; 20px; 100; -0.1em);    
   line-height: 20px;
