@@ -1,60 +1,59 @@
-.post {  
-  margin-bottom: 7%;   
+.post {
+  margin-bottom: 7%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   align-content: center;
-    
+
   &__picture {
     width: 100%;
     display: block;
   }
 
   &__title {
-    .propertyForText(#6a757e; @base-font; 25px; 700; 0.015em);    
+    .propertyForText(#6a757e; @base-font; 25px; 700; 0.015em);
     width: 100%;
-    margin: 0;  
+    margin: 0;
     padding-top: 0.2em;
     padding-bottom: 0.2em;
-    border-bottom: solid 1px  #d4dce3;    
+    border-bottom: solid 1px #d4dce3;
   }
 
-  &__date-of-posting {    
+  &__date-of-posting {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;     
-    width: 20%;
+    align-items: center;
+
     min-width: 130px;
-    &::before { 
+    &::before {
       .insertSvg(13px, 13px, -183px);
       margin-right: 5px;
-    }    
+    }
   }
 
-  &__author {      
-    width: 20%;  
+  &__author {
     min-width: 130px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;    
+    align-items: center;
     margin-right: auto;
 
-    &::before { 
+    &::before {
       .insertSvg(13px, 13px, -224px);
       margin-right: 5px;
-    }        
+    }
   }
 
   &__text {
-    border-top: solid 1px  #d4dce3;
+    border-top: solid 1px #d4dce3;
     width: 100%;
   }
 
-  &__loader { 
+  &__loader {
     margin-left: auto;
     margin-right: auto;
     border: 6px solid #f3f3f3;
@@ -66,37 +65,44 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
   }
-  
+
   @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
   }
 
   @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   p {
     color: #6a757e;
-    word-break:break-all;
- }
+    word-break: break-all;
+  }
 
-  &__date-of-posting, &__author {
-    
+  &__date-of-posting,
+  &__author {
     .propertyForText(#657179; Arial; 13px; 500);
     font-style: normal;
   }
 
-  &__social-likes {       
+  &__social-likes {
     min-width: 270px;
-    width: 20%;    
+    width: 20%;
 
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: flex-end;    
-
+    align-items: flex-end;
 
     .button {
       position: relative;
@@ -115,6 +121,10 @@
       padding: 0;
       padding-right: 1.5%;
 
+      &:focus {
+        outline: none;
+      }
+
       .propertyForText(white; @base-font; 15px; 600);
     }
   }
@@ -126,26 +136,25 @@
 
 .social-likes_yandex-api {
   min-width: auto;
-  min-height:  27px;
+  min-height: 27px;
   &::before {
     .insertSvg(19px, 19px, -208px);
     margin-left: 2px;
     margin-right: 15px;
   }
-  &:hover{
+  &:hover {
     background-color: #d83933;
   }
-
 }
 
-.social-likes_vk-api {  
+.social-likes_vk-api {
   min-width: auto;
-  min-height:  27px;
+  min-height: 27px;
   &::before {
     .insertSvg(19px, 19px, -178px);
     margin-left: 2px;
-    margin-right: 10px
-  }  
+    margin-right: 10px;
+  }
   &:hover {
     background-color: #48729e;
   }
@@ -153,12 +162,12 @@
 
 .social-likes_twitter-api {
   width: auto;
-  min-height:  27px;
+  min-height: 27px;
   &::before {
     .insertSvg(23px, 23px, -179px);
     margin-left: 3px;
     margin-right: 10px;
-  }  
+  }
   &:hover {
     background-color: #00aced;
   }
@@ -166,11 +175,11 @@
 
 .social-likes_google-api {
   width: auto;
-  min-height:  27px;
+  min-height: 27px;
   &::before {
     .insertSvg(25px, 25px, -38px);
     margin-right: 8px;
-  }  
+  }
   &:hover {
     background-color: #c25234;
   }
@@ -178,12 +187,12 @@
 
 .social-likes_facebook-api {
   width: auto;
-  min-height:  27px;
+  min-height: 27px;
   &::before {
     .insertSvg(23px, 23px, -360px);
     margin-left: 2px;
-    margin-right: 5px;    
-  }  
+    margin-right: 5px;
+  }
   &:hover {
     background-color: #3c5a98;
   }
