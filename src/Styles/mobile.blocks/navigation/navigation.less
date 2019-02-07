@@ -19,6 +19,7 @@
   width: 35px;
   height: 35px;
   label {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,26 +56,26 @@
 .navigation__nav-block:hover {  
   &::after { 
   top: 30px;
-  left: 4px;
+  left: 5px;
     border: solid transparent;
     content: " ";
     position: absolute;
     display: block;  
     border-top-color: #7ca7d9;
-    border-width: 15px; 
-    z-index: 3; 
+    border-width: 12px;
+    z-index: 3;
   }
 
   &::before {
   top: 35px;
-  left: 4px;
+  left: 7px;
     border: solid transparent;
     content: " ";
     position: absolute;
     display: block;          
     border-top-color:#6b9ad0;
-    border-width: 15px;  
-    z-index: 3; 
+    border-width: 10px;
+    z-index: 3;
   }
 }
 
@@ -100,12 +101,33 @@
 
 .side-bar__tag {
   display: flex;
-  height: 15px;
+  height: 14px;
   background-color: #6794b7;
   .propertyForText(#fff; Arial; 12px; 500; 0.1em);
   &::after {
-    background-color: #e1eefc;
+    left: 93%;
+    top: 30%;
+    content: " ";
+    position: absolute;
+    border-color: rgba(136, 183, 213, 0);
+    border-left-color: #6795b7;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
   }
+  &::before {
+    left: 100%;
+    top: 0;
+    border: solid transparent;
+    content: " ";
+    position: absolute;
+    border-left-color: #6795b7;
+    border-width: 8px;
+    margin: 0;
+
+  }
+
 }
 
 .navigation__pop-up-block_mobile {

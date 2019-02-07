@@ -8,7 +8,7 @@
   position: relative;
   display: flex;
   height: 54px;
-  width: 50px;  
+  width: 50px;
   margin-top: 3px;
   margin-bottom: 3px;
   label {
@@ -17,8 +17,8 @@
     align-items: center;
     height: 54px;
     width: 50px;
-  }  
   }
+}
 
 .navigator__news-menu {
   display: flex;
@@ -36,67 +36,67 @@
   //width: 500px;
 }
 
-.navigation__pop-up-block {  
+.navigation__pop-up-block {
   display: none;
 
   width: 100%;
-  background-color: #fff;      
+  background-color: #fff;
   border-top: 5px solid #c6defa;
   .propertyForText(#657179; @base-font; 15px; 300);
-    p {
+  p {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 }
 
 
-.pop-up-block__title{  
+.pop-up-block__title{
   display: flex;
   background-color: #eef4fa;
   min-height: 150px;
   width: 53px;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   z-index: 1;
-  &_left {    
+  &_left {
     float: left;
-    margin-right: 1rem;      
+    margin-right: 1rem;
     .propertyForText(#6290b4; @header-font; 22px; bold; 0.1em);
   }
-  &_right {    
+  &_right {
     float: right;
     margin-left: 1rem;
     text-align: center;
-    .propertyForText(#6290b4; @header-font; 12px; bold; 0.1em);   
+    .propertyForText(#6290b4; @header-font; 12px; bold; 0.1em);
   }
   span {
     transform: rotate(-90deg) ; //браузеры без префексов
   }
 }
 
-.navigation__nav-block:hover {  
-  &::after { 
-  top: 50px;
-  left: 10px;
+.navigation__nav-block:hover {
+  &::after {
+    top: 50px;
+    left: 10px;
     border: solid transparent;
     content: " ";
     position: absolute;
-    display: block;  
+    display: block;
     border-top-color: #7ca7d9;
-    border-width: 15px; 
-    z-index: 3; 
+    border-width: 15px;
+    z-index: 3;
   }
 
   &::before {
-  top: 57px;
-  left: 10px;
+    top: 57px;
+    left: 10px;
     border: solid transparent;
     content: " ";
     position: absolute;
-    display: block;          
+    display: block;
     border-top-color:#c6defa;
-    border-width: 15px;  
-    z-index: 3; 
+    border-width: 15px;
+    z-index: 3;
   }
 
   &::after {
@@ -104,17 +104,17 @@
   }
 }
 
-// .left:hover {  
+// .left:hover {
 //  & ~ .left {
 //    display: block;
 //   }
-// }   
+// }
 
-// .right:hover {  
+// .right:hover {
 //  & ~ .right {
 //    display: block;
 //   }
-// }   
+// }
 
 #show-about-block:checked ~ .left {
   display: block;
@@ -129,17 +129,15 @@
 
 // отключение левых и правых блоков
 .navigator__news-menu > div:not(:first-child) {
-    display: none;
+  display: none;
 }
 
 .navigator__main-mobile-menu > div:not(:first-child) {
-    display: none
+  display: none
 }
 
 //поставка фонового изображениния на фон ..
-  // background:  url('L:\Inner\traning-stucture\src\img\sprite.svg') no-repeat;
-  // background-size: 30px;
-  // background-position: 0px -60px;
-
-
+// background:  url('L:\Inner\traning-stucture\src\img\sprite.svg') no-repeat;
+// background-size: 30px;
+// background-position: 0px -60px;
 
