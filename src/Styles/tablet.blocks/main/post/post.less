@@ -1,3 +1,9 @@
+.post {
+  align-items: flex-start;
+  margin-bottom: 3%;
+  padding-left: 7.5%;
+}
+
 .post__social-likes {
   display:  flex;
   flex-direction: column;
@@ -6,11 +12,16 @@
   min-width: 40px;
   align-items: flex-end;
   align-self: start;
+
+  .button {
+    margin-bottom: 15%;
+
+  }
 }
 
 
 .main {
-  min-width: 0px;
+  min-width: 0;
 }
 
 .main__main-content {
@@ -32,9 +43,15 @@
 
 .post__picture {
   width: @fixedWidth;
+  min-height: 165px;
   order: -1;
 }
 
 .post__text {
   width: @fixedWidth;
+}
+
+.post__author {
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
 }

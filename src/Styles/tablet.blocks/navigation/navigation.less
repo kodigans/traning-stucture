@@ -1,6 +1,6 @@
 .navigation {
   justify-content: space-between;
-  padding: 0px;
+  padding: 0;
   flex-wrap: wrap;
 }
 
@@ -70,7 +70,7 @@
     .propertyForText(#6290b4; @header-font; 12px; bold; 0.1em);   
   }
   span {
-    transform: rotate(-90deg); //браузеры без префексов    
+    transform: rotate(-90deg) ; //браузеры без префексов
   }
 }
 
@@ -97,6 +97,10 @@
     border-top-color:#c6defa;
     border-width: 15px;  
     z-index: 3; 
+  }
+
+  &::after {
+
   }
 }
 
