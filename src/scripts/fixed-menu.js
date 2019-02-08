@@ -1,6 +1,6 @@
 const MAX_MOBILE_WINDOW_WIDTH = 680;
 const MIN_MOBILE_WINDOW_WIDTH = 320;
-const MAX_SCROLL_WITH_TOP = 100;
+const MAX_SCROLL_WITH_TOP = 0;
 
 function isScrollMore() {
   const currentScrollWithTop = document.documentElement.scrollTop;
@@ -10,24 +10,28 @@ function isScrollMore() {
   }
 }
 
-function  isMobileWindowSize() {
+function isMobileWindowSize() {
   const currentWindowWidth = document.documentElement.clientWidth;
 
-  if ((currentWindowWidth >= MIN_MOBILE_WINDOW_WIDTH) && (currentWindowWidth <= MAX_MOBILE_WINDOW_WIDTH)) {
+  if (
+    currentWindowWidth >= MIN_MOBILE_WINDOW_WIDTH &&
+    currentWindowWidth <= MAX_MOBILE_WINDOW_WIDTH
+  ) {
     return true;
   }
 }
 
-function  fixedMainMenuPage() {
-    const pageMenu =  document.getElementsByTagName('nav')[0];
+function fixedMainMenuPage() {
+  const pageMenu = document.getElementsByTagName('nav')[0];
 
-    if (isMobileWindowSize() && isScrollMore()) {
-        pageMenu.style.top = '0';
-        pageMenu.style.position = 'sticky';
-    } else {
-        pageMenu.style.position = 'relative';
+  if (isMobileWindowSize() && isScrollMore()) {
+    if (window.pageYOffset > pageMenu.offsetTop) {
+      pageMenu.classList.add('sticky');
+      console.log(true);
     }
+  } else {
+    pageMenu.classList.remove('sticky');
+  }
 }
 
-
-export  { fixedMainMenuPage }
+export { fixedMainMenuPage };

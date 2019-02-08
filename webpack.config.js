@@ -7,8 +7,6 @@ module.exports = env => {
   if (env.production === 'build') {
     console.log(true);
     return merge(common, build);
-  } else {
-    console.log(false);
-    return merge(common, prod);
   }
+  return merge(common, prod);
 };
