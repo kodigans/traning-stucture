@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/next" method="POST">
+    <label>
+            Имя пользователя:
+            <input type="text" name="name">
+        </label>
+        <br>
+        <label>
+            Возраст:
+            <input type="number" name="age">
+        </label>
+        <br>
+        <input type="submit" value="next page">
+    </form>
+<br>
+<form>
+<input type="text" data-cross="">
+</form>
+<script>
+    getValue = document.querySelector('[data-cross]');
+
+    getValue.addEventListener('input', () => {
+        fetch('/helps', {
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({city: getValue.value}),
+        })
+        .then(function (res) {
+            //console.log(res.text());
+            return res.text();
+        })
+        .then(function getData(res) {
+            currentCity = JSON.parse(res);
+            console.log(currentCity)
+        })
+    })
+
+</script>
+</body>
+</html>

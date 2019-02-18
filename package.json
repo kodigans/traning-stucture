@@ -1,20 +1,21 @@
 {
-  "name": "traning-stucture",
+  "name": "untitled28",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kodigans/traning-stucture.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kodigans/traning-stucture/issues"
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
   },
-  "homepage": "https://github.com/kodigans/traning-stucture#readme"
+  "dependencies": {
+    "cities.json": "^1.1.5"
+  }
 }
