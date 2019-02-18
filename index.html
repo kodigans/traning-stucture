@@ -5,43 +5,56 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/next" method="POST">
-    <label>
-            Имя пользователя:
-            <input type="text" name="name">
-        </label>
-        <br>
-        <label>
-            Возраст:
-            <input type="number" name="age">
-        </label>
-        <br>
-        <input type="submit" value="next page">
-    </form>
-<br>
-<form>
+<select data-select="">
+    <option value="RU"> Россия</option>
+    <option value="UA"> Украина</option>
+    <option value="BY"> Беларусь</option>
+    <option value="KZ"> Казахстан</option>
+</select> 
 <input type="text" data-cross="">
-</form>
-<script>
-    getValue = document.querySelector('[data-cross]');
 
-    getValue.addEventListener('input', () => {
-        fetch('/helps', {
+<script>
+    const currentCity = document.querySelector('[data-cross]');    
+    const currentCountry = document.querySelector('[data-select]');    
+
+    currentCountry.addEventListener('change', function () {
+        const currentCountry = this.value;
+
+        switch (currentCountry) {
+            case 'RU': 
+                currentCity.value = 'Moscow';
+                break;
+            case 'UA': 
+                currentCity.value = 'Donbas';
+                break;
+            case 'BY': 
+                currentCity.value = 'Minsk';
+                break;
+            case 'KZ':
+                currentCity.value = 'Astana'; 
+                break;
+        }              
+    })
+
+    currentCity.addEventListener('input', () => {            
+        const options = {
             method: 'POST',
             headers:{
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({city: getValue.value}),
-        })
-        .then(function (res) {
-            //console.log(res.text());
-            return res.text();
-        })
-        .then(function getData(res) {
-            currentCity = JSON.parse(res);
-            console.log(currentCity)
+            body: JSON.stringify({
+                country: currentCountry.value,
+                city: currentCity.value}),
+            };
+
+        fetch('/getCities', options)
+        .then(res => res.text())
+        .then(data => {
+            const currentCity = JSON.parse(data);
+            console.log(data)  
         })
     })
+
 
 </script>
 </body>

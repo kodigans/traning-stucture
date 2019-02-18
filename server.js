@@ -9,27 +9,22 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname+'/index.html');
 });
 
-app.post('/next', (req, res) => {
-    getRussianCites();
+app.post('/getCities', (req, res) => {        
+    res.send(getCitiesCountry(req.body.country).filter( elem => {
+        if (elem.name.indexOf(req.body.city) !== -1 ) {
+            return elem;
+        }
+    })) 
 });
 
 app.listen(3000, () => {
-    console.log('server started');
+  console.log('server started');
 });
 
-function getRussianCites() {
+function getCitiesCountry(country) {
   return cities.filter( elem => {
-    if (elem.country === 'RU') {
+    if (elem.country === country) {
       return elem;
     }
   });
 }
-
-app.post('/helps', (req, res) => {
-    console.log(req.body);
-    res.send(req.body.city);
-    // res.send(getRussianCites().filter( elem => {
-    //     elem
-    // }))
-}) ;
-
