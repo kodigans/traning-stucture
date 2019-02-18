@@ -1,43 +1,32 @@
-let slide = [...document.querySelectorAll('.slide')];
-let arrowLeft = document.querySelector('.wrap__arrow_left');
-let arrowRight = document.querySelector('.wrap__arrow_right');
-let current = 0;
+const addSlides = [...document.getElementsByClassName('wrap')];
 
-function reset() {
-    for (let i = 0; i < slide.length; i++) {
-        slide[i].style.display = 'none';
+addSlides.forEach(elem => {               
+  const maxValueSlide = [...elem.querySelectorAll('img')];
+  const currentLeftArrow = elem.querySelector('.wrap__arrow_left');    
+  const currentRightArrow = elem.querySelector('.wrap__arrow_right');  
+  let currentSlidesValue = 0;  
+
+  currentLeftArrow.addEventListener('click', () => {    
+    reset(maxValueSlide);   
+
+    if (currentSlidesValue === 0) {
+      currentSlidesValue = maxValueSlide.length;
+    }   
+      maxValueSlide[currentSlidesValue - 1].style.display = 'block';
+      currentSlidesValue--;
+    });
+
+  currentRightArrow.addEventListener('click', () => {      
+    reset(maxValueSlide);
+
+    if (currentSlidesValue === maxValueSlide.length - 1) {
+      currentSlidesValue = -1;
     }
+      maxValueSlide[currentSlidesValue + 1].style.display = 'block';
+      currentSlidesValue++;
+  });  
+})
+
+function reset(slidesArray) {    
+  slidesArray.forEach( elem => elem.style.display = 'none');    
 }
-
-function slideLeft() {
-    reset();
-    slide[current - 1].style.display = 'block';
-    current--;
-}
-
-function slideRight() {
-    reset();
-    slide[current + 1].style.display = 'block';
-    current++;
-}
-
-
-arrowLeft.addEventListener('click', function() {
-    if (current === 0) {
-        current = slide.length;
-    }
-
-    slideLeft();
-});
-
-arrowRight.addEventListener('click', function() {
-    if (current === slide.length - 1) {
-        current = -1;
-    }
-
-    slideRight();
-});
-
-slide.map(function(elem) {
-    console.log(elem);
-});
