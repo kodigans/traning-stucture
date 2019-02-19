@@ -17,10 +17,14 @@
     const currentCity = document.querySelector('[data-cross]');    
     const currentCountry = document.querySelector('[data-select]');    
 
-    currentCountry.addEventListener('change', function () {
-        const currentCountry = this.value;
+    currentCountry.addEventListener('change', () => chooseCountry.call(currentCountry));
+    currentCity.addEventListener('input', () => {                        
+            second1();
+        }); 
 
-        switch (currentCountry) {
+        second1 = getFunction(getCurrenCity, 300)
+    function chooseCountry() {      
+        switch (currentCountry.value) {
             case 'RU': 
                 currentCity.value = 'Moscow';
                 break;
@@ -34,9 +38,9 @@
                 currentCity.value = 'Astana'; 
                 break;
         }              
-    })
+    }
 
-    currentCity.addEventListener('input', () => {            
+    function getCurrenCity() {
         const options = {
             method: 'POST',
             headers:{
@@ -53,9 +57,20 @@
             const currentCity = JSON.parse(data);
             console.log(data)  
         })
-    })
+    }
 
+function getFunction(callBack, delay) {
+    let hasCall = true;
 
+    return getStringInInterval;
+    function getStringInInterval() {       
+    if (hasCall) {
+      hasCall = false;
+      setTimeout(() => hasCall = true, delay);              
+      callBack();
+    }        
+  }
+}
 </script>
 </body>
 </html>
