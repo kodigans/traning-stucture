@@ -4,6 +4,7 @@ const app = express();
 const cities = require('cities.json');
 
 app.use(bodyParser());
+app.use('/public', express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname+'/index.html');

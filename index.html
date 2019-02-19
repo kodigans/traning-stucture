@@ -1,76 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
-</head>
-<body>
-<select data-select="">
-    <option value="RU"> Россия</option>
-    <option value="UA"> Украина</option>
-    <option value="BY"> Беларусь</option>
-    <option value="KZ"> Казахстан</option>
-</select> 
-<input type="text" data-cross="">
-
-<script>
-    const currentCity = document.querySelector('[data-cross]');    
-    const currentCountry = document.querySelector('[data-select]');    
-
-    currentCountry.addEventListener('change', () => chooseCountry.call(currentCountry));
-    currentCity.addEventListener('input', () => {                        
-            second1();
-        }); 
-
-        second1 = getFunction(getCurrenCity, 300)
-    function chooseCountry() {      
-        switch (currentCountry.value) {
-            case 'RU': 
-                currentCity.value = 'Moscow';
-                break;
-            case 'UA': 
-                currentCity.value = 'Donbas';
-                break;
-            case 'BY': 
-                currentCity.value = 'Minsk';
-                break;
-            case 'KZ':
-                currentCity.value = 'Astana'; 
-                break;
-        }              
-    }
-
-    function getCurrenCity() {
-        const options = {
-            method: 'POST',
-            headers:{
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                country: currentCountry.value,
-                city: currentCity.value}),
-            };
-
-        fetch('/getCities', options)
-        .then(res => res.text())
-        .then(data => {
-            const currentCity = JSON.parse(data);
-            console.log(data)  
-        })
-    }
-
-function getFunction(callBack, delay) {
-    let hasCall = true;
-
-    return getStringInInterval;
-    function getStringInInterval() {       
-    if (hasCall) {
-      hasCall = false;
-      setTimeout(() => hasCall = true, delay);              
-      callBack();
-    }        
-  }
-}
-</script>
-</body>
+  </head>
+  <body>
+    <select data-select="">
+      <option value="RU"> Россия</option>
+      <option value="UA"> Украина</option>
+      <option value="BY"> Беларусь</option>
+      <option value="KZ"> Казахстан</option>
+    </select>
+    <input type="text" data-cross="" />
+    <div id="city-block">
+    </div>
+  <script src="public/search-city.js"></script>
+  </body>
 </html>
